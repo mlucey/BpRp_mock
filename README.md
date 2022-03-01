@@ -12,16 +12,18 @@ extinct_test.tar.gz contains 1,300 spectra uniformly sampled between the grid po
 The file synth_extinct.fits contains the effective temperature, surface gravity, metallicity ([Fe/H]), carbon abundance ([C/Fe]) and extinction (A_v) of each star in the extinct_grid.tar.gz file. The column synth is a boolean value describing whether the synthesis was successfully created for those parameters. synth_extinct_test.tar.gz is the equivalent file for the spectra in extinct_test.tar.gz.
 
 
-Below is a snippet of code for reading in all of the spectra into a single array where the spectra are normalized from 0-1:
-  t = Table.read('/home/mrl2968/Desktop/CEMP/synth_test_grid.fits')
+Below is a snippet of code for reading in all of the spectra into a single array where the spectra are normalized from 0-1
+
+
+
+ 	t = Table.read('/home/mrl2968/Desktop/CEMP/synth_test_grid.fits')
 	t = t[np.where(t['synth'])[0]]
-	all_y = np.zeros((len(t),2))
 	for i in range(len(t)):		
 		Teff = t['Teff'][i]
 		logg = t['logg'][i]
 		feh = t['feh'][i]
 		c = t['c_fe'][i]
-    a = t['A_v'][i]
+   		 a = t['A_v'][i]
 
 		filename = '%s_g%s_f%s_c%s_a%s.txt'%(str(Teff),str(logg),str(feh),str(c),str(a)
 
