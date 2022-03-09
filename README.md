@@ -5,6 +5,8 @@ Mock Gaia DR3 Bp & Rp spectra created by Maddie Lucey. Spectral synthesis was do
 
 Please reach out to me for more information if you are using these spectra prior to Gaia DR3 (m_lucey@utexas.edu). Quickly after DR3 I hope to have a paper people can cite where the full description of the mock spectra will be. 
 
+noise_grid.tar.gz is too large for github and can be found at this google drive link: https://drive.google.com/file/d/1atnNQ4XoHcrx0x3oKw_3nr5HjtRYtqIf/view?usp=sharing
+
 The files starting with "extinct_" do not contain noise, but do contain exintction. The files starting with "noise_" contain both extinction and noise.
 
 noise_grid.tar.gz contains a grid of 762,600 spectra with effective temperature between 3000 K and 6000 K in steps of 500 K, surface gravity between 0 dex and 5 dex in steps of 0.5 dex, metallicity between 0.5 dex and -5 dex in steps of 0.5 dex, [C/Fe] abundances between 2 dex and 0 dex in steps of 0.25 dex, SNR between 10 and 100 in steps of 10 and extinction (A_v) betweeon 10 mag and 0 mag with steps of 1 mag. As the atmosphereic models do not exist for some of these grid points, they do not have spectra. The column 'synth' in gives a boolean indicating whether or not the synthesis was successful. 
